@@ -10,5 +10,8 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  fontFamily: {
+    montserrat: ["JosefinSans_500Medium"]
+  },
 }
 
