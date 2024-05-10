@@ -5,7 +5,7 @@ import { store } from './store'
 import { Provider } from 'react-redux'
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import "react-native-gesture-handler"
-import WelcomeScreen from './screens/WelcomeScreen';
+import LoginScreen from './screens/LoginScreen';
 // import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 // import { useFonts } from 'expo-font';
@@ -25,7 +25,7 @@ export default function App() {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen name="Landing" component={LandingScreen} />
-            <Stack.Screen name="Welcome" component={WelcomeScreen} />
+            <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="Signup" component={SignupScreen} />
             <Stack.Screen name="Main" component={MainView} />
             {/* <Stack.Screen name="Login" component={LoginScreen} /> */}

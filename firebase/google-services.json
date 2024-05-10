@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "385287252433",
+    "project_id": "animax-17e77",
+    "storage_bucket": "animax-17e77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385287252433:android:17fe28c8321ee8c75758f0",
+        "android_client_info": {
+          "package_name": "com.animax"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzdAbgX4Oo_NbB6TvrCpq34O1sCWhdBUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

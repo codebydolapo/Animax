@@ -61,14 +61,14 @@ const LandingScreen = () => {
               iterationCount={1}
               className={`text-white text-sm text-center mb-5 tracking-widest leading-6 font-light`}
               >
-                The best anime streaming app of the century, to entertain you everyday!
+                Loading...
               </Animatable.Text>
 
               {/* <Text className={`text-white text-sm text-center mb-5 font-light tracking-wide`}>The best anime streaming app of the century, to entertain you everyday</Text> */}
 
               <TouchableOpacity
                 className={`w-[90%] h-12 mb-2 rounded-full items-center justify-center bg-[#049739]`}
-                onPress={() => navigation.navigate("Welcome")}
+                onPress={() => navigation.navigate("Login")}
               >
                 <Text className={`text-white font-extrabold tracking-widest text-sm  `}>Get Started</Text>
               </TouchableOpacity>

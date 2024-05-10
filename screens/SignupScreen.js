@@ -8,10 +8,17 @@ import * as Animatable from 'react-native-animatable'
 import facebook from "../assets/facebook.png"
 import google from "../assets/google.png"
 import apple from "../assets/apple.png"
+import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { auth, database } from "../config/firebase";
+import onHandleSignup from '../utills/handleSignup';
 
 const WelcomeScreen = () => {
 
   const navigation = useNavigation();
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
 
   useLayoutEffect(() => {
@@ -20,7 +27,8 @@ const WelcomeScreen = () => {
     })
   }, [])
 
-  // const backgroundImage = require('../assets/loginSignup.jpg');
+
+
 
   return (
     <SafeAreaView className={`h-full w-full bg-[#FFF]`}>
@@ -81,6 +89,21 @@ const WelcomeScreen = () => {
                 placeholder={"Username"}
                 placeholderTextColor="#00000044"
                 className={`pl-6 h-full flex-1 text-base text-black font-extrabold`}
+                textContentType="name"
+                value={name}
+                onChangeText={(text) => setName(text)}
+              />
+            </View>
+
+            <View className={`w-[90%] h-14 rounded-xl items-center flex-row justify-center space-x-2 px-2 border-[1px] border-[#00000018] `}>
+              <Icon name={"lock"} size={25} color="#00000044" />
+
+              <TextInput
+                placeholder={"Email"}
+                placeholderTextColor="#00000044"
+                className={`pl-6 h-full flex-1 text-base text-black font-extrabold`}
+                onChangeText={(text) => setEmail(text)}
+                value={email}
               />
             </View>
 
@@ -91,8 +114,14 @@ const WelcomeScreen = () => {
                 placeholder={"Password"}
                 placeholderTextColor="#00000044"
                 className={`pl-6 h-full flex-1 text-base text-black font-extrabold`}
+                onChangeText={(text) => setPassword(text)}
+                secureTextEntry={true}
+                textContentType="password"
+                value={password}
               />
             </View>
+
+
 
             <TouchableOpacity className={`w-[90%] h-14 rounded-full bg-[#39df76] items-center justify-center`}>
               <Text className={`text-white font-bold tracking-widest text-sm`}>Sign Up!</Text>
@@ -129,7 +158,7 @@ const WelcomeScreen = () => {
 
             </View>
 
-            <TouchableOpacity className={`w-full h-8 flex-row items-end justify-center space-x-1`} onPress={() => navigation.navigate("Main")}>
+            <TouchableOpacity className={`w-full h-8 flex-row items-end justify-center space-x-1`} onPress={() => { onHandleSignup(email, password, name) ?? navigation.navigate("Main")}}>
               <Animatable.Text
                 animation={"slideInUp"}
                 // iterationCount={1}

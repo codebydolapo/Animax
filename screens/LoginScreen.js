@@ -7,11 +7,15 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import facebook from "../assets/facebook.png"
 import google from "../assets/google.png"
 import apple from "../assets/apple.png"
+import onHandleLogin from '../utills/handleLogin'
 
 
-const WelcomeScreen = () => {
+const LoginScreen = () => {
 
     const navigation = useNavigation();
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
 
     useLayoutEffect(() => {
@@ -101,7 +105,7 @@ const WelcomeScreen = () => {
                             <Text className={`text-white font-bold tracking-widest text-sm`}>Sign In With Password</Text>
                         </TouchableOpacity>
                         <TouchableOpacity className={`w-full h-10 flex-row items-end justify-center space-x-1`}
-                        onPress = {()=>navigation.navigate("Signup")}
+                            onPress={() => navigation.navigate("Signup")}
                         >
                             <Animatable.Text
                                 animation={"slideInUp"}
@@ -111,9 +115,9 @@ const WelcomeScreen = () => {
                             <Animatable.Text
                                 animation={"slideInUp"}
                                 // iterationCount={1}
-                                className={`text-[#39df76] font-extrabold tracking-widest text-sm`}>  
-                                Sign Up!               
-                                </Animatable.Text>
+                                className={`text-[#39df76] font-extrabold tracking-widest text-sm`}>
+                                Sign Up!
+                            </Animatable.Text>
                             {/* <Text className={`text-[#00000073] tracking-widest text-xs`}>Don't have an account?</Text> */}
                             {/* <Text className={`text-[#049739] font-extrabold tracking-widest text-sm`}>Sign Up!</Text> */}
                         </TouchableOpacity>
@@ -130,7 +134,7 @@ const WelcomeScreen = () => {
     )
 }
 
-export default WelcomeScreen
+export default LoginScreen
 
 const styles = StyleSheet.create({
     container: {
