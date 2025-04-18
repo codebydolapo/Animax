@@ -1,0 +1,118 @@
+const recommendedAnime = {
+    "TV": [
+        {
+            "picture": "https://i.pinimg.com/736x/70/d0/f2/70d0f28d27f2274880ffb1250a455763.jpg",
+            "synopsis": "Eren Yeager joins the Survey Corps to fight against the terrifying Titans that threaten humanity's survival behind enormous walls.",
+            "licensor": "",
+            "title": "Attack on Titan",
+            "link": "https://myanimelist.net/anime/16498/Shingeki_no_Kyojin",
+            "genres": ["Action", "Drama", "Fantasy", "Military", "Shounen", "Super Power"],
+            "producers": [""],
+            "fromType": "",
+            "nbEp": 89, // total episodes including all seasons
+            "releaseDate": 2013,
+            "score": "8.53",
+            "members": "",
+            "id": "w34r",
+            "trailerLink": "MGRm4IzK1SQ"
+        },
+        {
+            "picture": "https://i.pinimg.com/736x/41/6d/aa/416daa2c86aa835cc72bbaa3c0227556.jpg",
+            "synopsis": "A group of misfits finds themselves aboard a spaceship called the Bebop, chasing criminals while dealing with their own troubled pasts.",
+            "licensor": "",
+            "title": "Cowboy Bebop",
+            "link": "https://myanimelist.net/anime/1/Cowboy_Bebop",
+            "genres": ["Action", "Adventure", "Comedy", "Drama", "Sci-Fi", "Space"],
+            "producers": [""],
+            "fromType": "",
+            "nbEp": 26,
+            "releaseDate": 1998,
+            "score": "8.77",
+            "members": "",
+            "id": "d32r",
+            "trailerLink": "AJKEXDKBVdk"
+        },
+        {
+            "picture": "https://i.pinimg.com/736x/19/5b/21/195b21515f13aff8d74fab2052b2f5b1.jpg",
+            "synopsis": "Edward and Alphonse Elric, two young alchemists, seek the Philosopher's Stone to restore their bodies after a failed alchemy experiment.",
+            "licensor": "",
+            "title": "Fullmetal Alchemist: Brotherhood",
+            "link": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood",
+            "genres": ["Action", "Adventure", "Drama", "Fantasy", "Magic", "Military", "Shounen"],
+            "producers": [""],
+            "fromType": "",
+            "nbEp": 64,
+            "releaseDate": 2009,
+            "score": "9.14",
+            "members": "",
+            "id": "34tg",
+            "trailerLink": "35cs5zFr2h8"
+        },
+        {
+            "picture": "https://i.pinimg.com/736x/b4/2b/80/b42b80772bb24d7d665cbe5790f9afbb.jpg",
+            "synopsis": "A young psychic named Mob struggles to keep his immense power in check while navigating his teenage years and working for a self-proclaimed psychic mentor.",
+            "licensor": "",
+            "title": "Mob Psycho 100",
+            "link": "https://myanimelist.net/anime/32182/Mob_Psycho_100",
+            "genres": ["Action", "Comedy", "Supernatural", "Psychological", "Shounen"],
+            "producers": [""],
+            "fromType": "",
+            "nbEp": 37, // total episodes for all seasons.
+            "releaseDate": 2016,
+            "score": "8.48",
+            "members": "",
+            "id": "34t3",
+            "trailerLink": "nTze7vAdRpM"
+        },
+        {
+            "picture": "https://i.pinimg.com/736x/d3/47/e3/d347e35351ac1d84de526064e65dbc52.jpg",
+            "synopsis": "A young boy named Gon Freecss embarks on a journey to become a Hunter and find his missing father, encountering powerful friends and foes along the way.",
+            "licensor": "",
+            "title": "Hunter x Hunter (2011)",
+            "link": "https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011",
+            "genres": ["Action", "Adventure", "Fantasy", "Shounen", "Super Power"],
+            "producers": [""],
+            "fromType": "",
+            "nbEp": 148,
+            "releaseDate": 2011,
+            "score": "9.05",
+            "members": "",
+            "id": "345f",
+            "trailerLink": "d6kBeJjTGnY"
+        },
+        {
+            "picture": "https://i.pinimg.com/736x/75/46/76/7546766d79782018898f9fa473e25b08.jpg",
+            "synopsis": "A shinigami, as a god of death, can kill anyone—provided they see their victim's face and write their victim's name in a notebook called a Death Note. One day, Ryuk, bored by the shinigami lifestyle and interested in seeing how a human would use a Death Note, drops one into the human realm.",
+            "licensor": "",
+            "title": "Death Note",
+            "link": "https://myanimelist.net/anime/1535/Death_Note",
+            "genres": ["Mystery", "Police", "Psychological", "Supernatural", "Thriller"],
+            "producers": [""],
+            "fromType": "",
+            "nbEp": 37,
+            "releaseDate": 2006,
+            "score": "8.63",
+            "members": "",
+            "id": "16w454",
+            "trailerLink": "NlJZ-YgAt-c"
+        },
+        {
+            "picture": "https://i.pinimg.com/474x/41/dc/27/41dc27ceb43a7ffab1de3037f809dd81.jpg",
+            "synopsis": "The story follows the journey of Frieren, an elven mage, and her companions as they embark on a journey after the defeat of the Demon King.",
+            "licensor": "",
+            "title": "Sousou no Frieren",
+            "link": "https://myanimelist.net/anime/52991/Sousou_no_Frieren",
+            "genres": ["Adventure", "Fantasy", "Slice of Life"],
+            "producers": [""],
+            "fromType": "",
+            "nbEp": 28, //As of January 2024, it is still ongoing
+            "releaseDate": 2023,
+            "score": "9.13",
+            "members": "",
+            "id": "17343f",
+            "trailerLink": "01WEqntM1NI"
+        },
+    ],
+};
+
+export default recommendedAnime;

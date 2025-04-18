@@ -1,39 +1,83 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+import { Stack } from "expo-router";
+import "../global.css";
+import { StatusBar, ActivityIndicator, Text } from "react-native";
+import { useFonts } from "expo-font";
+import { useEffect } from "react";
+import { SplashScreen } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
+import GlobalProvider from "@/lib/global-provider";
+import store from '../redux/store';
+import { Provider } from 'react-redux';
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+  const [loaded, error] = useFonts({
+    "Rubik-Bold": require("../assets/fonts/Rubik-Bold.ttf"),
+    "Rubik-ExtraBold": require("../assets/fonts/Rubik-ExtraBold.ttf"),
+    "Rubik-Light": require("../assets/fonts/Rubik-Light.ttf"),
+    "Rubik-Medium": require("../assets/fonts/Rubik-Medium.ttf"),
+    "Rubik-Regular": require("../assets/fonts/Rubik-Regular.ttf"),
+    "Rubik-SemiBold": require("../assets/fonts/Rubik-SemiBold.ttf"),
   });
 
   useEffect(() => {
     if (loaded) {
-      SplashScreen.hideAsync();
+      async function hideSplash() {
+        await SplashScreen.hideAsync();
+      }
+      hideSplash();
     }
   }, [loaded]);
 
+  if (error) {
+    return (
+      <SafeAreaView style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text>Error loading fonts.</Text>
+      </SafeAreaView>
+    );
+  }
+
   if (!loaded) {
-    return null;
+    return (
+      <SafeAreaView style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <ActivityIndicator size="large" />
+      </SafeAreaView>
+    );
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <Provider store={store}>
+        <GlobalProvider>
+            <StatusBar
+                animated={true}
+                backgroundColor="#000"
+            />
+            <Stack screenOptions={{ headerShown: false }}>
+                <Stack.Screen
+                    name="anime/[id]"
+                    options={{
+                        presentation: 'modal',
+                        animation: 'fade',
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="player/[id]"
+                    options={{
+                        presentation: 'modal',
+                        animation: 'fade',
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="shop/[id]"
+                    options={{
+                        presentation: 'modal',
+                        animation: 'fade',
+                        headerShown: false,
+                    }}
+                />
+            </Stack>
+        </GlobalProvider>
+    </Provider>
   );
 }
