@@ -171,7 +171,6 @@ const checkout = () => {
                     })}
                 </ScrollView>
                 :
-
                 <View className='flex-1 items-center justify-center '>
                     <View className='w-[80vw] h-[80vw]'>
                         <LottieView
@@ -180,7 +179,7 @@ const checkout = () => {
                             style={{ flex: 1 }}
                         />
                     </View>
-                    <Text className='text-[#3dd8c5]'>何も見つかりませんでした、友よ! </Text>  {/* I didn't find anything, friend */}
+                    <Text className='text-[#3dd8c5]'>何も見つかりませんでした、友よ! </Text> 
                     <Text className='text-white font-rubik-semibold text-xl my-4 text-center'>
                         Nothing in your cart yet.
                     </Text>
@@ -188,9 +187,10 @@ const checkout = () => {
 
             }
 
-            {cart.length > 0 && <View className='mt-3 h-[3.5rem] w-full rounded-lg mb-10 flex-row items-center justify-around relative bg-[#3dd8c5]'>
-                <Text className="text-white text-lg font-extrabold ">Proceed To Pay: ¥{total}</Text>
-            </View>}
+            {cart.length > 0 && 
+            <TouchableOpacity className='mt-3 h-[3.5rem] w-full rounded-lg mb-10 flex-row items-center justify-around relative bg-[#3dd8c5]' onPress={() => router.push('/loadingPayment')}>
+                <Text className="text-white text-lg font-extrabold ">Proceed To Pay ¥{total}</Text>
+            </TouchableOpacity>}
 
         </View>
     )
