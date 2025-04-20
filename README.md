@@ -36,7 +36,7 @@ This project was built using Expo. To run it locally, ensure you have Node.js an
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository_url>
+    git clone <https://github.com/codebydolapo/Animax>
     cd Animax
     ```
 
