@@ -84,7 +84,7 @@ The developer has outlined several potential improvements for Animax in the futu
 
 ## Author
 
-This project was developed by a passionate anime fan who dedicated their free time to bring Animax to life.
+This project was developed by Bashorun Dolapo (yours truly), a passionate anime fan who dedicated their free time to bring Animax to life.
 
 ## Acknowledgements
 
