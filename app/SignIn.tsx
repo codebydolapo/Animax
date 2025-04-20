@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, Image, TouchableOpacity, Alert, ActivityIndicator } from 'react-native'
 import React, { useState } from 'react'
-import { login } from '@/lib/appWrite';
+import { login, logout } from '@/lib/appWrite';
 import { Redirect } from "expo-router";
 // import { logout } from "@/lib/appWrite";
 import { useGlobalContext } from "@/lib/global-provider";
