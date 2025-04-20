@@ -95,4 +95,4 @@ This project was developed by Bashorun Dolapo (yours truly), a passionate anime 
 
 ## Stay Awesome!
 
-Keep building and stay awesome! We hope you enjoy using Animax!
+Keep building and stay awesome!
